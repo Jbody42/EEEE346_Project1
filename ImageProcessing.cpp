@@ -22,7 +22,7 @@ void hFlip(string filename){
         // Get the data
         getPGMData(data);
         
-        // Write back out a horizontally-flipped image
+        // Horizontally-flips an image
         int hold;
         for(size_t i = 0; i < height; i++){
            for(size_t j = 0; j < width/2; j++){
@@ -31,6 +31,9 @@ void hFlip(string filename){
                 data[i][width-1-j] = hold;   
             } 
         }
+
+        //writes the image out 
+        
         
         // Clean up memory
         for(int i = 0; i < height; i++){
