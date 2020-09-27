@@ -2,7 +2,7 @@
 
 
 
-void hFlip(int** data){
+void hFlip(string filename){
     string fileName = "ballons.pgm";
     
     //Open File set information
@@ -25,9 +25,11 @@ void hFlip(int** data){
         // Write back out a horizontally-flipped image
         int hold;
         for(size_t i = 0; i < height; i++){
-           for(size_t j = 0; j < width; j++)
+           for(size_t j = 0; j < width/2; j++){
                 hold = data[i][j]; 
-         //       data[i][j] = data[i][width-1-j]    
+                data[i][j] = data[i][width-1-j];
+                data[i][width-1-j] = hold;   
+            } 
         }
         
         // Clean up memory
@@ -39,7 +41,7 @@ void hFlip(int** data){
     
 }
 
-
+/*
 int flip_array(int array[], int n){
 
     int hold[n];
@@ -52,3 +54,5 @@ int flip_array(int array[], int n){
         array[i] = hold [i];
     }
 }
+
+*/

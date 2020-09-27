@@ -1,11 +1,11 @@
 #include <iostream>
+#include "ImageProcessing.h"
 #include "PGM.h"
 using namespace std;
 
-int main(){
+void main(){
     
-
-
+    hFlip("ballons.pgm");
 
 
 }
