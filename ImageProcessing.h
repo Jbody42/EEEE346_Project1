@@ -5,7 +5,7 @@ using namespace std;
 
 
 
-void copyfile(string filename);
+void copyImage(string filename);
 
 
 

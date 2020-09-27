@@ -4,7 +4,7 @@ using namespace std;
 #include "ImageProcessing.h"
 
 
-void copyfile(string filename){
+void copyImage(string filename){
     
 
     if (openPGM(filename)){
