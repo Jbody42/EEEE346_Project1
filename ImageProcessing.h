@@ -13,4 +13,4 @@ void hFlip(int data[], int w, int h );
 /*
 * Function to flip an array
 */
-void flip_array(int array[], int n);
+int flip_array(int array[], int n);
