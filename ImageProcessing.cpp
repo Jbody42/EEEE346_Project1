@@ -3,10 +3,9 @@
 
 
 void hFlip(string filename){
-    string fileName = "ballons.pgm";
     
     //Open File set information
-    if( openPGM(fileName) )
+    if( openPGM(filename) )
     {
         // Get Image Size Information
         int width = getPGMWidth();
@@ -32,8 +31,8 @@ void hFlip(string filename){
             } 
         }
 
-        //writes the image out 
-        
+        // Writes the image out 
+        writePGM(filename, data);
         
         // Clean up memory
         for(int i = 0; i < height; i++){
