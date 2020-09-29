@@ -1,6 +1,5 @@
-
 #ifndef ImageProcessing_H__
-#define ImagePrecessing_H__
+#define ImageProcessing_H__
 
 #include <iostream>
 #include<fstream>
