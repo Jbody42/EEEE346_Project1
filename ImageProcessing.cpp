@@ -32,7 +32,7 @@ void hFlip(string filename){
         }
 
         // Writes the image out 
-        writePGM(filename, data);
+        writePGM("hFlip.pgm", data);
         
         // Clean up memory
         for(int i = 0; i < height; i++){
@@ -40,7 +40,6 @@ void hFlip(string filename){
         }
         delete data;
     }
-    
 }
 
 /*

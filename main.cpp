@@ -3,9 +3,10 @@
 #include "PGM.h"
 using namespace std;
 
-void main(){
+int main(){
     
     hFlip("ballons.pgm");
 
+    return 0;
 
 }
