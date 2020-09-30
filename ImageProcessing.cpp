@@ -7,18 +7,17 @@ void hFlip(string filename, string newFilename){
     //Open File set information
     if( openPGM(filename) )
     {
-        // Get Image Size Information
+        
         int width = getPGMWidth();
         int height = getPGMHeight();
-        // Declare and allocate memory for data
+       
         int** data;
-        data = new int*[ height];
+        data = new int*[height];
 
         for(int i = 0; i < height; i++){
             data[i] = new int[width];
         }
 
-        // Get the data
         getPGMData(data);
         
         // Horizontally-flips an image
@@ -31,10 +30,8 @@ void hFlip(string filename, string newFilename){
             } 
         }
 
-        // Writes the image out 
         writePGM(newFilename, data);
         
-        // Clean up memory
         for(int i = 0; i < height; i++){
             delete[] data[i];
         }
