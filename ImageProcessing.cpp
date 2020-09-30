@@ -2,8 +2,9 @@
 
 
 
-void hFlip(string filename, string newFilename){
+void hFlip(string filename){
     
+    //filename = "";
     //Open File set information
     if( openPGM(filename) )
     {
@@ -29,13 +30,15 @@ void hFlip(string filename, string newFilename){
                 data[i][width-1-j] = hold;   
             } 
         }
-
+        string newFilename;
+         cin >> newFilename;
         writePGM(newFilename, data);
         
         for(int i = 0; i < height; i++){
             delete[] data[i];
         }
         delete data;
+        
     }
 }
 

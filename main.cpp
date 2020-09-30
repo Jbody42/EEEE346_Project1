@@ -4,11 +4,10 @@
 using namespace std;
 
 int main(){
-    string filename, nFilename;
+    string filename;
 
     cin >> filename;
-    cin >> nFilename;
-    hFlip(filename, nFilename);
+    hFlip(filename);
 
     return 0;
 
