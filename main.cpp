@@ -7,7 +7,7 @@ using namespace std;
 int main(){
     
 
-    copyImage("lena.pgm");
+    copyImage("peppers.pgm");
 
     return 0;
 }
