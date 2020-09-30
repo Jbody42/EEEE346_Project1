@@ -2,7 +2,7 @@
 
 
 
-void hFlip(string filename){
+void hFlip(string filename, string newFilename){
     
     //Open File set information
     if( openPGM(filename) )
@@ -32,7 +32,7 @@ void hFlip(string filename){
         }
 
         // Writes the image out 
-        writePGM("hFlip.pgm", data);
+        writePGM(newFilename, data);
         
         // Clean up memory
         for(int i = 0; i < height; i++){

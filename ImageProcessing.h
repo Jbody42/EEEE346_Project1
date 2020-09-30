@@ -8,7 +8,7 @@ using namespace std;
 * Function to horizontally flip an image
 * and output the image file
 */
-void hFlip(string filename);
+void hFlip(string filename, string newFilename);
 
 /*
 * Function to flip an array

@@ -4,8 +4,11 @@
 using namespace std;
 
 int main(){
-    
-    hFlip("ballons.pgm");
+    string filename, nFilename;
+
+    cin >> filename;
+    cin >> nFilename;
+    hFlip(filename, nFilename);
 
     return 0;
 
