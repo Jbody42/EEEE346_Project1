@@ -16,32 +16,33 @@ void hFlip(string filename){
         int width = getPGMWidth();
         int height = getPGMHeight();
        
-        int** data;
-        data = new int*[height];
+        int** original;
+        original = new int*[height];
 
         for(int i = 0; i < height; i++){
-            data[i] = new int[width];
+            original[i] = new int[width];
         }
 
-        getPGMData(data);
+        getPGMData(original);
         
         // Horizontally-flips an image
         int hold;
         for(size_t i = 0; i < height; i++){
            for(size_t j = 0; j < width/2; j++){
-                hold = data[i][j]; 
-                data[i][j] = data[i][width-1-j];
-                data[i][width-1-j] = hold;   
+                hold = original[i][j]; 
+                original[i][j] = original[i][width-1-j];
+                original[i][width-1-j] = hold;   
             } 
         }
         string newFilename;
-         cin >> newFilename;
-        writePGM(newFilename, data);
+        cin >> newFilename;
+       
+        writePGM(newFilename, original);
         
         for(int i = 0; i < height; i++){
-            delete[] data[i];
+            delete[] original[i];
         }
-        delete data;
+        delete original;
         
     }
 }
@@ -61,7 +62,7 @@ void copyImage(string filename){
         }
 
         getPGMData(original);
-        
+
         writePGM("copy.pgm", original);
 
         for(int i = 0; i < height; i++){

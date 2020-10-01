@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdio.h>
+#include <string.h>
 #include "ImageProcessing.h"
 #include "PGM.h"
 using namespace std;
