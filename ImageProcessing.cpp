@@ -1,5 +1,9 @@
+#include <iostream>
+#include "PGM.h"
+#include <stdio.h>
+#include <string.h>
 #include "ImageProcessing.h"
-
+using namespace std;
 
 
 void hFlip(string filename){
