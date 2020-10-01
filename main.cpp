@@ -7,7 +7,7 @@ int main(){
     string filename;
 
     cin >> filename;
-    hFlip(filename);
+    copyImage(filename);
 
     return 0;
 
