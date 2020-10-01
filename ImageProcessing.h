@@ -10,6 +10,8 @@ using namespace std;
 */
 void hFlip(string filename);
 
+void copyImage(string filename);
+
 /*
 * Function to flip an array
 */
