@@ -6,7 +6,7 @@ using namespace std;
 int main(){
     string filename;
 
-    cin >> filename;
+    filename = "lena.pgm";
     copyImage(filename);
 
     return 0;
