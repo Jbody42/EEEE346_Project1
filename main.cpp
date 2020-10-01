@@ -8,9 +8,11 @@ using namespace std;
 int main(){
     string filename;
 
-    filename = "new.pgm";
-    copyImage(filename);
-    hFlip(filename);
+    filename = "noisy.pgm";
+    //copyImage(filename);
+    //hFlip(filename);
+    //vFlip(filename);
+    medianFilter(filename);
 
     return 0;
 
