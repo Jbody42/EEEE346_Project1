@@ -8,8 +8,9 @@ using namespace std;
 int main(){
     string filename;
 
-    filename = "lena.pgm";
+    filename = "new.pgm";
     copyImage(filename);
+    hFlip(filename);
 
     return 0;
 
