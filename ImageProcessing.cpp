@@ -61,7 +61,7 @@ void copyImage(string filename){
         }
 
         getPGMData(original);
-
+        
         writePGM("copy.pgm", original);
 
         for(int i = 0; i < height; i++){
