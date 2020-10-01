@@ -42,6 +42,31 @@ void hFlip(string filename){
     }
 }
 
+void copyImage(string filename){
+    
+
+    if (openPGM(filename)){
+        int width = getPGMWidth();
+        int height = getPGMHeight();
+
+        int** original;
+        original = new int*[height];
+        
+        for (int i = 0; i < height; i++){
+            original[i] = new int [width];
+        }
+
+        getPGMData(original);
+
+        writePGM("copy.pgm", original);
+
+        for(int i = 0; i < height; i++){
+            delete[] original[i];
+        }
+        delete original;
+    }
+}
+
 /*
 int flip_array(int array[], int n){
 
