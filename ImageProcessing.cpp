@@ -34,6 +34,7 @@ void hFlip(string filename){
                 original[i][width-1-j] = hold;   
             } 
         }
+        
         string newFilename;
         cin >> newFilename;
        
