@@ -67,11 +67,10 @@ int main(){
             }
 
             else{
-                cout << "Please enter a valid number";
+                cout << "Please enter a valid number next time" << endl;
+                cout << "Perform another operation [y/n]? ";
 
             }
-
-
         }
 
         else if (answer.compare("n") == 0){
@@ -79,7 +78,7 @@ int main(){
         }
 
         else{
-            cout << "Please use y or n to continue: ";
+            cout << "Please use y or n in order to perform another operation: ";
         }
         cin >> answer;
     }
