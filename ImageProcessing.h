@@ -9,7 +9,7 @@ using namespace std;
 
 
 
-void copyImage(string filename);
+void copyImage(string filename, string copyname);
 
 
 

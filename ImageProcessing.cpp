@@ -4,7 +4,7 @@ using namespace std;
 #include "ImageProcessing.h"
 
 
-void copyImage(string filename){
+void copyImage(string filename, string copyname){
     
 
     if (openPGM(filename)){
@@ -20,7 +20,7 @@ void copyImage(string filename){
 
         getPGMData(original);
 
-        writePGM("copy.pgm", original);
+        writePGM(copyname, original);
 
         for(int i = 0; i < height; i++){
             delete[] original[i];
