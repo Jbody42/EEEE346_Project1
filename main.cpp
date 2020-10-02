@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
-#include "ImageProcessing.h"
+#include "imageProcessing.h"
 #include "PGM.h"
 using namespace std;
 
