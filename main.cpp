@@ -12,7 +12,7 @@ int main(){
     //copyImage(filename);
     //hFlip(filename);
     //vFlip(filename);
-    medianFilter(filename);
+    //medianFilter(filename);
 
     return 0;
 

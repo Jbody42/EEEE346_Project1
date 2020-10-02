@@ -9,28 +9,24 @@ using namespace std;
 * Function to copy an image
 * and output the image file
 */
-void copyImage(string filename);
+void copyImage(string filename, string copyImage);
 
 /*
 * Function to horizontally flip an image
 * and output the image file
 */
-void hFlip(string filename);
+void hFlip(string filename, string hFlip);
 
 /*
 * Function to vertically flip an image
 * and output the image file
 */
-void vFlip(string filename);
+void vFlip(string filename, string vFlip);
 
 /*
 * Function that filters an image
 * and outputs the image file
 */
-void medianFilter(string fileName);
+void medianFilter(string fileName, string medianFilter);
 
 
-/*
-* Function to flip an array
-*/
-//int flip_array(int array[], int n);

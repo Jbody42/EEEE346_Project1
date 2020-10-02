@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void copyImage(string filename){
+void copyImage(string filename, string copyImage){
     
 
     if (openPGM(filename)){
@@ -33,7 +33,7 @@ void copyImage(string filename){
 }
 
 
-void hFlip(string filename){
+void hFlip(string filename, string hFlip){
     
     //filename = "";
     //Open File set information
@@ -62,10 +62,7 @@ void hFlip(string filename){
             } 
         }
         
-        string newFilename;
-        std::cin >> newFilename;
-       
-        writePGM(newFilename, original);
+        writePGM(hFlip, original);
         
         for(int i = 0; i < height; i++){
             delete[] original[i];
@@ -75,9 +72,9 @@ void hFlip(string filename){
     }
 }
 
-void vFlip(string filename){
+void vFlip(string filename, string vFlip){
     
-    //filename = "";
+    
     //Open File set information
     if( openPGM(filename) )
     {
@@ -94,7 +91,7 @@ void vFlip(string filename){
 
         getPGMData(original);
         
-        // Horizontally-flips an image
+        // Horizontally-flips an image through array manipulation
         int hold;
         for(size_t j = 0; j < width; j++){
            for(size_t i = 0; i < height/2; i++){
@@ -104,10 +101,8 @@ void vFlip(string filename){
             } 
         }
         
-        string newFilename;
-        std::cin >> newFilename;
        
-        writePGM(newFilename, original);
+        writePGM(vFlip, original);
         
         for(int i = 0; i < height; i++){
             delete[] original[i];
@@ -117,7 +112,7 @@ void vFlip(string filename){
     }
 }
 
-void medianFilter(string fileName) {
+void medianFilter(string fileName, string medianFilter) {
 
     if (openPGM(fileName) ){
 
@@ -135,9 +130,24 @@ void medianFilter(string fileName) {
             original[i] = new int[width];
         }
 
+        int** original1;
+
+        original1 = new int*[height];
+
+        for(int i = 0; i<height; i++){
+            original1[i] = new int[width];
+        }
+
 	    getPGMData(original);
 
-        
+        for(int i = 0; i < height; i++){
+            for(int j = 0; j < width; j++){
+                    original1[i][j] = original[i][j]; 
+            
+            }
+        }    
+
+
 
 	        int imCol; //is image collumn counter
 	        int imRow; //is image row counter
@@ -167,10 +177,6 @@ void medianFilter(string fileName) {
                         window[windex] = original[wRPop][wCPop];                        //...relative to the index of where the window is centered in the image
 
                         if(windex == 80){
-                           /*for(int i=0; i<80; i++){
-                                std::cout << window[i] << endl; 
-                           }*/
-                            //for(windex = 0; windex <= 80; windex++){
                                 for(int i=0; i<80; i++){
                                     for(int j=(i+1); j<81; j++){
                                         if(window[i]>window[j]){
@@ -182,29 +188,16 @@ void medianFilter(string fileName) {
                                         }
                                     }
                                 }
-                                
-                                /*for(int i=0; i<81; i++){
-                                    std::cout << window[i] << endl;
-                                }*/
+                               //Have we reached the last element? Then swap original...
+                                original1[imRow][imCol] = window[40];   
+                                windex = 0;             
+                               
 
-
-                                /*if((window[windex] > window[windex+1]) && windex != 80){  //IF we finished populating the window, then we begin sorting the array.
-                                    bucket = window[windex];                            //If the first element is larger than the segwaying element, we swap em.
-                                    window[windex] = window[windex+1];                   //Then we reset the counter to see if a new greater thand condition has...
-                                    window[windex+1] = bucket;                          //...been met. We do this only until the last index is met, which can only...
-                                    windex = 0;                                         //...happen if the elements are in order, therefore the median is in 40.
-                                }*/
-
-                                //else if(windex == 80){                                  //Have we reached the last element? Then swap original...
-                                original[imRow][imCol] = window[40];   
-                                windex = 0;             //...pixel we're currently centered on with the window median
-                                //}
-
-                            //} 
+                           
 
                         }
 
-                        windex++;                                                       //This is to line up populating the next element in window Array.
+                        windex++;      //This is to line up populating the next element in window Array.
 
                     }
 
@@ -214,15 +207,19 @@ void medianFilter(string fileName) {
 
         }
 
-        string newFilename;
-        std::cin >> newFilename;
+        
        
-        writePGM(newFilename, original);
+        writePGM(medianFilter, original1);
         
         for(int i = 0; i < height; i++){
             delete[] original[i];
         }
         delete original;
+
+        for(int i = 0; i < height; i++){
+            delete[] original1[i];
+        }
+        delete original1;
 
     }
 
