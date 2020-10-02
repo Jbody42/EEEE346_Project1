@@ -1,3 +1,13 @@
+/**
+ *	FileName:	ImageProcessing.cpp
+ *	Author:		Jayson Body, Will Wright, Peter Cardona
+ *	Date:		9/20/2020
+ *	Revised:	10/2/2020
+ *
+ *	Description:	Main fucntion that utilizes the Imageprocessing functions with user inputs and ouputs the files.
+ */
+
+
 #include <iostream>
 #include <stdio.h>
 #include <string>

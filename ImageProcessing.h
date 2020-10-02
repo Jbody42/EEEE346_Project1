@@ -1,3 +1,13 @@
+/**
+ *	FileName:	ImageProcessing.cpp
+ *	Author:		Jayson Body, Will Wright, Peter Cardona
+ *	Date:		9/20/2020
+ *	Revised:	10/2/2020
+ *
+ *	Description:	functions to flip, copy and fliter pgm files.
+ */
+
+
 #ifndef ImageProcessing_H__
 #define ImageProcessing_H__
 
