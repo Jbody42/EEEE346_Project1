@@ -167,10 +167,12 @@ void medianFilter(string fileName) {
                         window[windex] = original[wRPop][wCPop];                        //...relative to the index of where the window is centered in the image
 
                         if(windex == 80){
-                            
+                           /*for(int i=0; i<80; i++){
+                                std::cout << window[i] << endl; 
+                           }*/
                             //for(windex = 0; windex <= 80; windex++){
-                                for(int i=0; i<79; i++){
-                                    for(int j=(i+1); j<80; j++){
+                                for(int i=0; i<80; i++){
+                                    for(int j=(i+1); j<81; j++){
                                         if(window[i]>window[j]){
                                             int hold = 0;
 
@@ -181,8 +183,9 @@ void medianFilter(string fileName) {
                                     }
                                 }
                                 
-                                
-
+                                /*for(int i=0; i<81; i++){
+                                    std::cout << window[i] << endl;
+                                }*/
 
 
                                 /*if((window[windex] > window[windex+1]) && windex != 80){  //IF we finished populating the window, then we begin sorting the array.
