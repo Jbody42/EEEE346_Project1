@@ -1,4 +1,8 @@
+#ifndef ImageProcessing_H__
+#define ImageProcessing_H__
+
 #include <iostream>
+
 #include "PGM.h"
 #include <stdio.h>
 #include <string.h>
@@ -9,7 +13,7 @@ using namespace std;
 * Function to copy an image
 * and output the image file
 */
-void copyImage(string filename, string copyImage);
+void copyImage(string filename, string copyname);
 
 /*
 * Function to horizontally flip an image
@@ -29,4 +33,6 @@ void vFlip(string filename, string vFlip);
 */
 void medianFilter(string fileName, string medianFilter);
 
+
+#endif
 

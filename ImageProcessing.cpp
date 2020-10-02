@@ -7,7 +7,7 @@
 using namespace std;
 
 
-void copyImage(string filename, string copyImage){
+void copyImage(string filename, string copyname){
     
 
     if (openPGM(filename)){
@@ -23,7 +23,7 @@ void copyImage(string filename, string copyImage){
 
         getPGMData(original);
 
-        writePGM("copy.pgm", original);
+        writePGM(copyname, original);
 
         for(int i = 0; i < height; i++){
             delete[] original[i];
@@ -31,6 +31,7 @@ void copyImage(string filename, string copyImage){
         delete original;
     }
 }
+
 
 
 void hFlip(string filename, string hFlip){
@@ -224,6 +225,9 @@ void medianFilter(string fileName, string medianFilter) {
     }
 
 }
+
+
+
 
 
 
